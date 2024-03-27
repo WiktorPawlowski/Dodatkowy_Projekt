@@ -18,17 +18,29 @@ def przerzuc_na_okno_zupy():
     okno_zupy.title("Zupy")
     okno_zupy.geometry("700x400")
 
+    def wyjscie_zupy():
+        okno_zupy.destroy()
+
     wybor_zupy = tk.Label(okno_zupy, text="Wybierz przepis na zupę:", font=("Arial", 20), fg="blue")
     wybor_zupy.place(x=200, y=30)
 
-    rosol = tk.Button(okno_zupy, text="Rosół", width=30)
-    rosol.place(x=120, y=100)
+    wyjscie_zopy_napis = tk.Label(okno_zupy, text="Naciśnij przycisk jeżeli chcesz wyjść:", font=("Arial", 20), fg="blue")
+    wyjscie_zopy_napis.place(x= 130, y=300)
 
-    ogorkowa = tk.Button(okno_zupy, text="Ogórkowa", width=30)
-    ogorkowa.place(x=350, y=100)
+    rosol = tk.Button(okno_zupy, text="[1]Rosół", width=30)
+    rosol.place(x=120, y=80)
 
-    barszcz_czerwony = tk.Button(okno_zupy, text=("Barszcz czerwony"), width=30)
-    barszcz_czerwony.place(x=120, y= 140)
+    ogorkowa = tk.Button(okno_zupy, text="[2]Ogórkowa", width=30)
+    ogorkowa.place(x=350, y=80)
+
+    barszcz_czerwony = tk.Button(okno_zupy, text=("[3]Barszcz czerwony"), width=30)
+    barszcz_czerwony.place(x=120, y= 120)
+
+    pomidorowa = tk.Button(okno_zupy, text=("[4]Pomidorowa"), width=30)
+    pomidorowa.place(x=350, y=120)
+
+    wyjscie_przycisk = tk.Button(okno_zupy, text=("Wyjście"), width=40, command=wyjscie_zupy)
+    wyjscie_przycisk.place(x=200, y=350)
 ################################################################################################################
 
 def przerzuc_na_okno_sniadania():
